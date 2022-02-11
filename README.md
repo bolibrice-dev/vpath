@@ -48,5 +48,6 @@ A Makefile is provided making it possible to build the project by simply typing 
 For convenience, if one is running WSL, a .vscode folder is also provided making it possible to run and debug this project right from Visual Studio Code
 
 Note: the binary data is currently not JPEG, just a bunch of bytes to demonstrate that the core logic works.
+IMPORTANT: I did not take data endianess into consideration as I focused on the core functionality.
 
 Testing code will be added soon :-)
