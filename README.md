@@ -50,4 +50,6 @@ For convenience, if one is running WSL, a .vscode folder is also provided making
 Note: the binary data is currently not JPEG, just a bunch of bytes to demonstrate that the core logic works.
 IMPORTANT: I did not take data endianess into consideration as I focused on the core functionality.
 
+Also: This is a user space application not a kernel aplication
+
 Testing code will be added soon :-)
