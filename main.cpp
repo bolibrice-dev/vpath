@@ -1,19 +1,19 @@
 #include "camera.h"
 #include "cam_hardware.h"
+#include "vpathlog.h"
 #include <ostream>
 #include <stdint.h>
 #include <string>
 
 int main(){
-    std::cout << "Camera Interface for Vistapath...created by B. Olibrice" << std::endl;
+    vpathlog log;
+    log.print("Testing Camera Interface for Vistapath...created by B. Olibrice",true);
     camera mycam;
-    //cam_hardware hardware;
-
-    mycam.read_code();
-    /*hardware.WriteControlCode("#STGET\r\n");
-    for(int i = 0; i < 20; i++){
-        unsigned char barcode = hardware.ReadBarcode();
-        std::cout << "barcode is " << std::to_string(barcode) << std::endl;
-    }*/
+    std::vector<std::string> code = mycam.read_code();
+    std::vector<unsigned char> img = mycam.capture_image();
+    for(unsigned int i = 0; i < img.size(); i++){
+        printf("0x%x ", img.at(i));
+    }
+    log.print("\n");
     return 0;
 }
