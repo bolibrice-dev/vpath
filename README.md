@@ -23,7 +23,7 @@ The project consists of the following classes:
 
 ## Description of the functions in the core class
 
-**capture_image**:
+### **capture_image**:
 
 This function really doesn't do much besides sending a control code to the camera hardware to tell camera to take a snapshot of the image, then call ProcessImageData function which does the actual image processing
 
