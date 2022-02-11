@@ -24,7 +24,13 @@ The project consists of the following classes:
 ## Description of the functions in the core class
 
 **capture_image**:
+
 This function really doesn't do much besides sending a control code to the camera hardware to tell camera to take a snapshot of the image, then call ProcessImageData function which does the actual image processing
 
 **read_code**:
+
 like capture_image, this function mainly sends a control code to the camera hardware so camera can capture barcode(s) then call ProcessBarcodeData function which does actual barcode processing
+
+**ProcessBarcodeData**:
+
+this function setup a state machine to make it easier to detect what type of data(if any) we are getting from the camera hardware. With the state machine we are able to see if the transfer was interrupted either by the USB cable being pulled out or some other hardware failure. With that scheme, unless the barcode(s) is/are valid they do not make their way to the caller
