@@ -33,4 +33,10 @@ like capture_image, this function mainly sends a control code to the camera hard
 
 ### **ProcessBarcodeData**:
 
-this function setup a state machine to make it easier to detect what type of data(if any) we are getting from the camera hardware. With the state machine we are able to see if the transfer was interrupted either by the USB cable being pulled out or some other hardware failure. With that scheme, unless the barcode(s) is/are valid they do not make their way to the caller
+this function setup a state machine to make it easier to detect what type of barcode data(if any) we are getting from the camera hardware. With the state machine we are able to see if the transfer was interrupted either by the USB cable being pulled out or some other hardware failure. With that scheme, unless the barcode(s) is/are valid they do not make their way to the caller
+
+### **ProcessImageData**:
+
+like "ProcessBarcodeData", this function setup a state machine to make it easier to detect what type of image data(if any) we are getting from the camera hardware. With the state machine we are able to see if the transfer was interrupted either by the USB cable being pulled out or some other hardware failure. With that scheme, unless the image is valid it does not make its way to the caller.
+
+Testing code will be added soon :-)
