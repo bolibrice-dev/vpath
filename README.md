@@ -39,4 +39,14 @@ this function setup a state machine to make it easier to detect what type of bar
 
 like "ProcessBarcodeData", this function setup a state machine to make it easier to detect what type of image data(if any) we are getting from the camera hardware. With the state machine we are able to see if the transfer was interrupted either by the USB cable being pulled out or some other hardware failure. With that scheme, unless the image is valid it does not make its way to the caller.
 
+####Testing / Building the project
+
+A "main" function is provided for convenience and is the basis for upcoming [unit] test which will essentially consist of simulating "unplugging" a usb cable and verify that  incomplete barcode / image data is indeed discarded
+
+A Makefile is provided making it possible to build the project by simply typing "make" in the project root folder
+
+For convenience, if one is running WSL, a .vscode folder is also provided making it possible to run and debug this project right from Visual Studio Code
+
+Note: the binary data is currently not JPEG
+
 Testing code will be added soon :-)
