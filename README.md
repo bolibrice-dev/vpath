@@ -4,7 +4,7 @@ The project consists of the following classes:
 
 - cam_hardware:
 
-  Implements some form of a hardware abstraction. It's not really part of the project. It just simulate what would be the serial port interface
+  Implements some form of a hardware abstraction. It's not really part of the project. The code in that class simulates a pseudo serial port interface
 
 - camera: 
 
